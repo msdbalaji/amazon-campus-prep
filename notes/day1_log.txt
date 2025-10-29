@@ -1,0 +1,5 @@
+Date: 2025-10-29
+Hours studied: 0.5
+Tasks done: Python environment setup, GitHub repo created, 5 Python practice scripts done.
+Next goal: Start full Day 1 schedule tomorrow 8 AM (Aptitude + DSA + ML mini project).
+Feeling: Confident start. 
