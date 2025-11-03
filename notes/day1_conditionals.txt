@@ -1,0 +1,181 @@
+2️⃣ Leap Year Checker
+🧠 Logic Explanation
+
+A year is a leap year if:
+
+It is divisible by 4, and
+
+(It is not divisible by 100 or it is divisible by 400)
+
+This rule handles exceptions like 1900 (not leap) and 2000 (leap).
+
+Year	÷4	÷100	÷400	Leap?
+2020	✅	❌	-	✅
+1900	✅	✅	❌	❌
+2000	✅	✅	✅	✅
+
+💻 Code
+
+year = int(input("Enter a year: "))
+
+if (year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)):
+    print("Leap year")
+else:
+    print("Not a leap year")
+
+🧩 Why it works
+
+*The first part (year % 4 == 0) checks the basic leap year condition.
+
+*The second part (year % 100 != 0 or year % 400 == 0) filters out century years that aren’t multiples of 400.
+
+🔹 3️⃣ Largest of Three Numbers
+🧠 Logic Explanation
+
+To find the largest among 3 numbers, compare step by step:
+
+If a > b and a > c → a is largest
+
+Else if b > c → b is largest
+
+Else → c is largest
+
+We must use chained conditions.
+
+💻 Code
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+
+if a > b and a > c:
+    print("Largest number is:", a)
+elif b > c:
+    print("Largest number is:", b)
+else:
+    print("Largest number is:", c)
+
+🧩 Why it works
+
+*It compares pairwise in logical order, ensuring exactly one branch prints.
+
+🔹 4️⃣ Grade Calculator
+🧠 Logic Explanation
+
+You must:
+
+Get marks of 5 subjects.
+
+Find average = total / 5.
+
+Use if-elif ladder to determine grade.
+
+Average	Grade
+≥ 90	A
+75–89	B
+60–74	C
+< 60	Fail
+
+💻 Code
+
+m1 = int(input("Enter mark 1: "))
+m2 = int(input("Enter mark 2: "))
+m3 = int(input("Enter mark 3: "))
+m4 = int(input("Enter mark 4: "))
+m5 = int(input("Enter mark 5: "))
+
+avg = (m1 + m2 + m3 + m4 + m5) / 5
+
+if avg >= 90:
+    grade = 'A'
+elif avg >= 75:
+    grade = 'B'
+elif avg >= 60:
+    grade = 'C'
+else:
+    grade = 'Fail'
+
+print("Average:", avg)
+print("Grade:", grade)
+
+🧩 Why it works
+
+*The first true condition stops the chain, so you don’t need and statements.
+*The logic “cascades” in descending order.
+
+🔹 5️⃣ Vowel or Consonant
+🧠 Logic Explanation
+
+Take a single alphabet.
+If it’s in the set of vowels → print “vowel”, else → “consonant”.
+
+💻 Code
+
+ch = input("Enter a character: ").lower()
+
+if ch in ['a', 'e', 'i', 'o', 'u']:
+    print("Vowel")
+else:
+    print("Consonant")
+
+🧩 Why it works
+
+.lower() ensures case-insensitive comparison.
+
+Using in checks membership efficiently (O(1) average).
+
+
+
+Questions for day 1 until conditional flow(if,elif,else, nested if),logical operators(and,not,or) for reasoning ability
+
+1️⃣
+
+You have:
+
+a = 5
+b = 10
+if a > 2 or b < 5:
+    print("Condition True")
+else:
+    print("Condition False")
+
+
+Will this print “Condition True” or “Condition False”?
+Explain why in one or two sentences.
+
+2️⃣
+
+If you write:
+
+num = 0
+if num:
+    print("Yes")
+else:
+    print("No")
+
+
+What will it print?
+Explain how Python treats 0, empty strings, and empty lists in boolean context.
+
+3️⃣
+
+In this code:
+
+x = 20
+if x % 4 == 0 and not x % 6 == 0:
+    print("Yes")
+else:
+    print("No")
+
+
+What condition is being checked here in plain English?
+
+4️⃣
+
+What’s the difference between if a == b: and if a is b:?
+Why might a is b be risky when comparing strings or integers?
+
+5️⃣
+
+When would you use nested if instead of elif?
+Give a short example (no need for code, just describe the situation).
